@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.env
+*.env
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Delta Lake
+_delta_log/
+*.parquet
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets — NEVER commit
+config/secrets.env
+*.pem
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
