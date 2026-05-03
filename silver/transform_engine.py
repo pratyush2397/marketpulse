@@ -123,17 +123,7 @@ class Transform_engine:
         silver_df = self.spark.read.format("delta").load(self.silver_path)
         logger.info(f"✅ Silver rows: {silver_df.count()}")
         silver_df.select("Date", "ticker", "Close", "MA7", "MA30", "daily_return_pct").show(5)
-    
-    
-if __name__ == "__main__":
-     spark= create_spark_session()
 
-     engine = Transform_engine(
-        spark=spark,
-        bronze_path="D:/marketpulse/data/bronze/stocks",
-        silver_path="D:/marketpulse/data/silver/stocks"
-    )
-     engine.run()
 
 
 
